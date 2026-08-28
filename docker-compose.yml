@@ -1,8 +1,9 @@
 version: '3'
 services:
   postgres:
+    image: 'postgres:16'
     volumes:
-    - /home/vasa/data/:/data/pg
+    - /home/vasa/data/:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: example
     ports:
