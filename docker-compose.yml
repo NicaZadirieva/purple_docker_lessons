@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres:
+    image: 'postgres:16'
+    volumes:
+    - /home/vasa/data/:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+    - 5432:5432
+    networks:
+    - my-pg-network
+
+networks:
+  my-pg-network:
